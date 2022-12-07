@@ -3,7 +3,7 @@
 <article>
     <h4>{{ card.question|safe }}</h4>
     {% if not check_card %}
-        <p>{{ card.answer }}</p>
+        <p>{{ card.answer|safe }}</p>
         <hr>
         <a href="{% url 'card-update' card.id %}" role="button">
             🖋 Edit Card
